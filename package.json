@@ -1,0 +1,65 @@
+{
+  "name": "open-pdf-with-browser",
+  "displayName": "Open PDF with Browser",
+  "description": "Open PDF files in the integrated browser.",
+  "version": "0.0.3",
+  "publisher": "mimikkai",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "openPdfWithBrowser.open",
+        "title": "Open PDF with Browser",
+        "icon": "$(globe)"
+      }
+    ],
+    "customEditors": [
+      {
+        "viewType": "openPdfWithBrowser.viewer",
+        "displayName": "PDF in Browser",
+        "selector": [
+          {
+            "filenamePattern": "*.pdf"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "openPdfWithBrowser.open",
+          "when": "resourceExtname == .pdf",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "openPdfWithBrowser.open",
+          "when": "resourceExtname == .pdf",
+          "group": "2_open"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/vscode": "^1.100.0",
+    "typescript": "^5.8.2"
+  }
+}

@@ -1,0 +1,9 @@
+# see: https://github.com/microsoft/apm
+
+name: vsix-vscode-extension-development-skill
+version: 1.0.0
+
+description: Comprehensive guide for developing VS Code extensions (.vsix)
+license: MIT
+type: skill
+includes: auto
