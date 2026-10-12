@@ -2,7 +2,7 @@
   "name": "open-pdf-with-browser",
   "displayName": "Open PDF with Browser",
   "description": "Open PDF files in the integrated browser.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "mimikkai",
   "license": "MIT",
   "engines": {

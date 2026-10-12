@@ -11,7 +11,7 @@ VS Code extension that opens PDF files in the integrated browser (`workbench.act
 ## Install
 
 ```bash
-code --install-extension open-pdf-with-browser-0.0.3.vsix
+code --install-extension open-pdf-with-browser-0.0.4.vsix
 ```
 
 > Requires an editor with the integrated browser (`workbench.action.browser.open` command).
